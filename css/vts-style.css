@@ -1,0 +1,312 @@
+/* Video Testimonial slider css */
+.swiper-container {
+    /* width: 100%;
+    height: 100%; */
+    margin: 20px auto;
+}
+.swiper-wrapper{
+    height: auto;
+    margin-bottom: 20px;
+}
+.swiper-slide-container {
+    font-size: 15px;
+    background: #fff;
+    /* height:90%; */
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+.img-container {
+    position: relative;
+    border-radius: 15px;
+    width: 100%;
+    height: 250px;
+    background-size: cover !important;
+}
+.img-container:before {
+    content:'';
+    position:absolute;
+    left:0; top:0;
+    width:100%; height:100%;
+    display:inline-block;
+    border-radius: 15px;
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.644) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0, 0, 0, 0.644)), color-stop(100%,rgba(0,47,75,0.5))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(241, 250, 255, 0) 0%,rgba(0, 0, 0, 0.644) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(240, 249, 255, 0) 0%,rgba(0, 0, 0, 0.644) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(237, 249, 255, 0) 0%,rgba(0, 0, 0, 0.644) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(243, 251, 255, 0) 0%,rgba(0, 0, 0, 0.644) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002f4b', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+.flag {
+    position: absolute;
+    left: -1px;
+    top:  -1px;
+    width:15%;
+    background: #fff;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-bottom-right-radius: 40px !important;
+}
+.review {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding-right: 10px;
+    padding-top: 10px;
+    
+}
+.star-rating {
+    color: #ffffff;
+    font-size: 1.1em;
+    text-align: center;
+    display: flex;
+}
+
+.star-rating .star {
+    /* background-color: #EECC4E; */
+    margin-left: 2px;
+    padding: 0px 2px 0px 2px;
+}
+.name-video{
+    position: absolute;
+    top: 80%;
+    left: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.name-video .title{
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.name-video .video-btn{
+   
+    margin-left: 10px;
+    margin-right: 10px;
+}
+p.quote{
+    color: #7a7a7a;
+    margin-top: 10px;
+}
+/* video palayer css */
+
+.video-play-button {
+    transform: translateX(-50%) translateY(-0%);
+    box-sizing: content-box;
+    display: block;
+    width: 10px;
+    height: 18px;
+    border-radius: 50%;
+    padding: 5px 12px 5px 14px;
+
+}
+
+.video-play-button:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    border-radius: 50%;
+    -webkit-animation: pulse-border 1500ms ease-out infinite;
+    animation: pulse-border 1500ms ease-out infinite;
+}
+
+.video-play-button:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    border-radius: 50%;
+    transition: all 200ms;
+}
+
+.video-play-button span {
+display: block;
+position: relative;
+z-index: 3;
+width: 0;
+height: 0;
+border-top: 10px solid transparent;
+border-bottom: 10px solid transparent;
+margin-top: -5px;
+    margin-left: -5px;
+}
+
+@-webkit-keyframes pulse-border {
+0% {
+  transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+  opacity: 1;
+}
+100% {
+  transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+  opacity: 0;
+}
+}
+
+@keyframes pulse-border {
+0% {
+  transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+  opacity: 1;
+}
+100% {
+  transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+  opacity: 0;
+}
+}
+
+/* bootstrapp video model css */
+.youtube-video .modal-dialog {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    padding: 0 15px;
+    height: 100%;
+    max-width: 1000px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.video-container {
+    position: relative;
+    padding-bottom: 50%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+iframe#youtubevideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.youtube-video .modal-content {
+background: none !important;
+border: none;
+}
+/* bootstrapp video model css end */
+
+
+.modal-open {
+overflow: hidden
+}
+
+.modal {
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 1050;
+display: none;
+overflow: hidden;
+outline: 0
+}
+
+.modal-open .modal {
+overflow-x: hidden;
+overflow-y: auto
+}
+
+.modal-dialog {
+position: relative;
+width: auto;
+margin: .5rem;
+pointer-events: none
+}
+
+.modal.fade .modal-dialog {
+transition: -webkit-transform .3s ease-out;
+transition: transform .3s ease-out;
+transition: transform .3s ease-out,-webkit-transform .3s ease-out;
+-webkit-transform: translate(0,-25%);
+transform: translate(0,-25%)
+}
+
+.modal.show .modal-dialog {
+-webkit-transform: translate(0,0);
+transform: translate(0,0)
+}
+
+.modal-content {
+position: relative;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-ms-flex-direction: column;
+flex-direction: column;
+width: 100%;
+pointer-events: auto;
+background-color: #fff;
+background-clip: padding-box;
+border: 1px solid rgba(0,0,0,.2);
+border-radius: .3rem;
+outline: 0
+}
+
+.modal-backdrop {
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 1040;
+background-color: #000
+}
+
+.modal-backdrop.fade {
+opacity: 0
+}
+
+.modal-backdrop.show {
+opacity: .5
+}
+
+.modal-body {
+position: relative;
+-webkit-box-flex: 1;
+-ms-flex: 1 1 auto;
+flex: 1 1 auto;
+padding: 1rem
+}
+.modal-scrollbar-measure {
+position: absolute;
+top: -9999px;
+width: 50px;
+height: 50px;
+overflow: scroll
+}
+
+@media (min-width: 576px) {
+.modal-dialog {
+  max-width:500px;
+  margin: 1.75rem auto
+}
+}
+
+
